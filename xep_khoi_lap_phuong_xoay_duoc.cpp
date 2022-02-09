@@ -57,10 +57,10 @@ int main()
     ios_base::sync_with_stdio(0);
     cin.tie(0);
     int dem = 0;
-    while(1)
+ //   while(1)
     {
         cin >> n;
-        if(n == 0) break;
+//        if(n == 0) break;
         for(int i = 1; i <= n; ++i)
         {
             int x,y,z;
@@ -83,8 +83,8 @@ string copyright()
 }
 
 /*
-    <số khối>
-    <3 chỉ số kích thước của từng khối> nhân vs số khối
+    <so khoi>
+    <3 chi so kich thuoc cua tung khoi> nhan voi so khoi
     ...
-    0 -> để kết thúc chương trình
+    0 -> de ket thuc chuong trinh
 */

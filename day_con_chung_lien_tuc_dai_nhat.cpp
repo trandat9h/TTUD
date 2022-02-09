@@ -1,44 +1,42 @@
+// C++ program using to find length of the
+// longest common substring recursion
+#include <iostream>
 
-// C++ implementation of the above approach
-#include <bits/stdc++.h>
 using namespace std;
 
-// Function to find the length of the
-// longest LCS
-int LCSubStr(string s, string t, int n, int m)
+string X, Y;
+
+// Returns length of function f
+// or longest common substring
+// of X[0..m-1] and Y[0..n-1]
+int lcs(int i, int j, int count)
 {
 
-    // Create DP table
-    int dp[2][m + 1];
-    int res = 0;
+	if (i == 0 || j == 0)
+		return count;
 
-    for (int i = 1; i <= n; i++) {
-        for (int j = 1; j <= m; j++) {
-            if (s[i - 1] == t[j - 1]) {
-                dp[i % 2][j] = dp[(i - 1) % 2][j - 1] + 1;
-                if (dp[i % 2][j] > res)
-                    res = dp[i % 2][j];
-            }
-            else
-                dp[i % 2][j] = 0;
-        }
-    }
-    return res;
+	if (X[i - 1] == Y[j - 1]) {
+		count = lcs(i - 1, j - 1, count + 1);
+	}
+	count = max(count,
+				max(lcs(i, j - 1, 0),
+					lcs(i - 1, j, 0)));
+	return count;
 }
 
-// Driver Code
+// Driver code
 int main()
 {
-    string X = "OldSite:GeeksforGeeks.org";
-    string Y = "NewSite:GeeksQuiz.com";
+	int n, m;
 
-    int m = X.length();
-    int n = Y.length();
+	X = "xxcx";
+	Y = "cxcx";
 
-    cout << LCSubStr(X, Y, m, n);
-    return 0;
-    cout << "GFG!";
-    return 0;
+	n = X.size();
+	m = Y.size();
+
+	cout << lcs(n, m, 0);
+
+	return 0;
 }
 
-// This code is contributed by rajsanghavi9.

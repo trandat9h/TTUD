@@ -63,6 +63,6 @@ string copyright(){
 }
 
 /*
-    <số phần tử> <khoảng cách min> <khoảng cách max>
-    <n trọng số của n phần tử>
+    <so phan tu> <khoang cach min> <khoang cach max>
+    <n trong so cua n phan tu>
 */

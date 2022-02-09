@@ -55,5 +55,5 @@ int main()
 }
 
 /*
-    <V cốc 1> < V cốc 2> < V cần lấy>
+    <V coc 1> <V coc 2> <V can lay>
 */
