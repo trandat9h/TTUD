@@ -50,6 +50,6 @@ int main()
 // This code is contributed
 // by Akanksha Rai(Abby_akku)
 
-/* các đồng tiền nhập vào mảng arr trong main
-    tổng tiền cần quy đổi nhập vào n trong main
+/* Cac dong tien nhap vao mang arr trong main
+	Tong tien can quy doi nhap vao n trong main
 */
