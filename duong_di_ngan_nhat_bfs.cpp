@@ -40,8 +40,8 @@ void bfs(int u) {
 
 int main() {
   input();
-  dist[1]=0;
-  bfs(1);
+  dist[1]=0; // sua dinh xuat phat neu can thiet
+  bfs(1);// dinh xuat phat cua bfs
   for(int i=1; i<=N;i++)
   {
       cout<<dist[i]<<" ";
