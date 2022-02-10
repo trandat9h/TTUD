@@ -20,10 +20,11 @@ int main()
         maxi = a[0];
         for (int i =1;i< n;i++)
         {
-            maxi = max(maxi+a[i], a[i]);
+            maxi = max(maxi+a[i]*a[i]*a[i], a[i]*a[i]*a[i]);
             result = max(maxi, result);
         }
         cout << result;
         return 0;
     }
 }
+
