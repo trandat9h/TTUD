@@ -13,8 +13,8 @@ bool operator<(pair<int, int> a, pair<int, int> b) {
 }
 
 void input() {
-  cin >> V >> E;
-  cin >> start_v;
+  cin >> V >> E; // V: number of vertex, E number of edge
+  cin >> start_v; // starting vertex
   adj_list.resize(V);
   distances.resize(V);
   for (int i = 0; i < V; i++) {
@@ -22,7 +22,7 @@ void input() {
   }
   for (int i = 0; i < E; i++) {
     int a, b, c;
-    cin >> a >> b >> c;
+    cin >> a >> b >> c; // Edge from a to b with value c
     adj_list[a].push_back(b);
     adj_list[b].push_back(a);
     distances[a][b] = c;
