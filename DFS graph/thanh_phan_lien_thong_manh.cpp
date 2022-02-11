@@ -38,23 +38,21 @@ void SCC(int u) {
 }
 
 void init() {
-    Adj[1] = { 2 };
-    Adj[2] = { 3 };
-    Adj[3] = { 1, 4 };
-    Adj[4] = { 6 };
-    Adj[5] = { 8 };
-    Adj[6] = { 5, 7, 9 };
-    Adj[7] = { 9, 10 };
-    Adj[8] = { 11 };
-    Adj[9] = { 4 };
-    Adj[10] = {};
-    Adj[11] = { 5 };
+    Adj[1] = { 3,2 };
+    Adj[2] = { 1,5,3 };
+    Adj[3] = { 1,2,5 };
+    Adj[4] = { };
+    Adj[5] = { 2,3,6,7 };
+    Adj[6] = { 5,7,8 };
+    Adj[7] = { 5,6,8};
+    Adj[8] = { 6,7 };
+
 }
 
 int main() {
     init();
 
-    int n = 11; // số đỉnh
+    int n = 8; // số đỉnh
     for (int i = 1; i <= n; i++) {
         if (Num[i] == -1) SCC(i);
     }

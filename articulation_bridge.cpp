@@ -16,10 +16,10 @@ int vtime;
 void input()
 {
   cin >> N >> M;
-  adjacentList.resize(N);
-  visited.resize(N);
-  entryPoint.resize(N);
-  lowPoint.resize(N);
+  adjacentList.resize(N+100);
+  visited.resize(N+100);
+  entryPoint.resize(N+100);
+  lowPoint.resize(N+100);
   for (int i = 0; i < M; i++)
   {
     int a, b;
