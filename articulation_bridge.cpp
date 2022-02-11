@@ -92,12 +92,12 @@ int main()
   cout << "\nCut vertices: ";
   for (auto i : curVertices)
   {
-    cout << i << " ";
+    cout << i+1 << " ";
   }
   cout << "\nBridges: \n";
   for (auto i : bridges)
   {
-    cout << i.first << " - " << i.second << endl;
+    cout << i.first+1 << " - " << i.second+1 << endl;
   }
   cout << "Low array: ";
   for (auto i : lowPoint)

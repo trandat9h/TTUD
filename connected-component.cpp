@@ -7,7 +7,6 @@ int n,m;
 void dfs(int u)
 {
     visited[u] = true;
-    cout<<u<<endl;
     for(int i = 0; i <edge[u].size();i++)
     {
         if(!visited[edge[u][i]]) dfs(edge[u][i]);

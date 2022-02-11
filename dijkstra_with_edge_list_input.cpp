@@ -15,12 +15,12 @@ bool operator<(pair<int, int> a, pair<int, int> b) {
 void input() {
   cin >> V >> E; // V: number of vertex, E number of edge
   cin >> start_v; // starting vertex
-  adj_list.resize(V);
-  distances.resize(V);
-  for (int i = 0; i < V; i++) {
-    distances[i].assign(V, INT_MAX);
+  adj_list.resize(V+100);
+  distances.resize(V+100);
+  for (int i = 1; i <= V; i++) {
+    distances[i].assign(V+100, INT_MAX);
   }
-  for (int i = 0; i < E; i++) {
+  for (int i = 1; i <= E; i++) {
     int a, b, c;
     cin >> a >> b >> c; // Edge from a to b with value c
     adj_list[a].push_back(b);
@@ -32,7 +32,7 @@ void input() {
 
 void init_data() {
   shortest_path_tree.clear();
-  d.assign(V, INT_MAX);
+  d.assign(V+100, INT_MAX);
   d[start_v] = 0;
 }
 
@@ -61,7 +61,7 @@ int main() {
   input();
   init_data();
   dijkstra(start_v);
-  for (int i = 0; i < d.size(); i++) {
+  for (int i = 1; i < V; i++) {
     cout << d[i] << " ";
   }
   return 0;
